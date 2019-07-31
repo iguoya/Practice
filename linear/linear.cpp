@@ -1,6 +1,6 @@
 #include "linear.h"
 
-Linear::Linear()
+linear::linear()
 {
 
 }
