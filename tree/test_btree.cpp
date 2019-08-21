@@ -60,14 +60,14 @@ TEST_F(BtreeTest, LDR)   //此时使用的是TEST_F宏
 
 TEST_F(BtreeTest, DLRTraversal)   //此时使用的是TEST_F宏
 {
-    result = tree.DLRTraversal();
+    result = tree.DLRTraverse();
     vector<string> dlr = {"A", "B", "D", "E", "C", "F", "G"};
     EXPECT_EQ(result, dlr);
 }
 
 TEST_F(BtreeTest, LDRTraversal)   //此时使用的是TEST_F宏
 {
-    result = tree.LDRTraversal();
+    result = tree.LDRTraverse();
     vector<string> ldr = {"D", "B", "E", "A", "F", "C", "G"};
     EXPECT_EQ(result, ldr);
 }
@@ -81,9 +81,14 @@ TEST_F(BtreeTest, LRD)   //此时使用的是TEST_F宏
 
 TEST_F(BtreeTest, high)   //此时使用的是TEST_F宏
 {
-    EXPECT_EQ(tree.depth(tree.root, 0), 3);
+    EXPECT_EQ(tree.depth(tree.root), 3);
 }
 
+TEST_F(BtreeTest, LevelTraverse)   //此时使用的是TEST_F宏
+{
+    vector<string> result = {"A", "B", "C", "D", "E", "F", "G"};
+    EXPECT_EQ(result, tree.LevelTraverse());
+}
 
 
 
