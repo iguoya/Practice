@@ -7,12 +7,14 @@
 <body>
 <div id="app">
     <div>
-        <input type="text" v-model="">
-        <span> name: {{name}}</span>
+        <input type="text" v-model="name">
+        <span v-show="name"> name: {{name}}</span>
     </div>
     <div>
-        <span> age: {{age}}</span>
+        <input type="text" v-model="age">
+        <span v-show="age"> age: {{age}}</span>
     </div>
+
 
 </div>
 
@@ -24,6 +26,7 @@
         data:{
             name:"A",
             age:22
+            // foodList:
         }
     })
 </script>
