@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
+    {{msg}}
     <div>
         <input type="text" v-model="name">
         <span v-show="name"> name: {{name}}</span>
     </div>
     <div>
         <input type="text" v-model="age">
-        <span v-show="age"> age: {{age}}</span>
+        <span v-show="age"> age : {{age}}</span>
     </div>
+    <ul>
+        <li v-for="food in foods">{{food}}</li>
+    </ul>
 
+    <!-- 标准的按钮 -->
+    <button type="button" class="btn btn-default">默认按钮</button>
+    <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+    <button type="button" class="btn btn-primary">原始按钮</button>
+    <!-- 表示一个成功的或积极的动作 -->
+    <button type="button" class="btn btn-success">成功按钮</button>
+    <!-- 信息警告消息的上下文按钮 -->
+    <button type="button" class="btn btn-info">信息按钮</button>
+    <!-- 表示应谨慎采取的动作 -->
+    <button type="button" class="btn btn-warning">警告按钮</button>
+    <!-- 表示一个危险的或潜在的负面动作 -->
+    <button type="button" class="btn btn-danger">危险按钮</button>
+    <!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
+    <button type="button" class="btn btn-link">链接按钮</button>
 
+</div>
+<div id="app2">
+    <h2>{{title}}</h2>
+    {{school.name}}:{{school.mobile}}
+    <ul><li v-for="c in campus">{{c}}</li></ul>
 </div>
 
 
@@ -24,9 +48,35 @@
     var app=new Vue({
         el:'#app',
         data:{
+            msg:"黑马程序员",
             name:"A",
-            age:22
-            // foodList:
+            age:44,
+            foods: [
+                {
+                    name: "葱",
+                    price: 22.5,
+                },
+                {
+                    name: "姜",
+                    price: 5.5,
+                },
+                {
+                    name: "蒜",
+                    price: 6.3,
+                },
+
+            ]
+        }
+    })
+    var app2=new Vue({
+        el:'#app2',
+        data:{
+            title:"数据对象",
+            school: {
+                name: "黑马程序员",
+                mobile: "400-618-9090",
+            },
+            campus:["北京校区", "上海校区", "广州校区", "深圳校区"]
         }
     })
 </script>
