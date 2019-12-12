@@ -25,13 +25,13 @@
     <br />
     <button type="button" class="btn btn-default" >默认按钮</button>
     <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
-    <button type="button" class="btn btn-primary">原始按钮</button>
+    <button type="button" class="btn btn-primary" v-on:click="add">原始按钮</button>
     <!-- 表示一个成功的或积极的动作 -->
-    <button type="button" class="btn btn-success">成功按钮</button>
+    <button type="button" class="btn btn-success" v-on:click="show(121)">成功按钮</button>
     <!-- 信息警告消息的上下文按钮 -->
-    <button type="button" class="btn btn-info">信息按钮</button>
+    <button type="button" class="btn btn-info" v-on:click="show(125)">信息按钮</button>
     <!-- 表示应谨慎采取的动作 -->
-    <button type="button" class="btn btn-warning">警告按钮</button>
+    <button type="button" class="btn btn-warning" v-on:click="show(126)">警告按钮</button>
     <!-- 表示一个危险的或潜在的负面动作 -->
     <button type="button" class="btn btn-danger">危险按钮</button>
     <!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
@@ -76,7 +76,15 @@
         methods: {
             abc:function() {
                 // alert("kkk");
-                console.log("abc");
+                // console.log("abc");
+                this.name = "许援朝";
+                this.age = 100;
+            },
+            add:function () {
+                this.age++;
+            },
+            show:function (index) {
+                console.log(index);
             }
         }
     })
