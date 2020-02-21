@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    {{msg}}
+    <div>
+        <input type="text" v-model="name">
+        <span v-show="name"> name: {{name}}</span>
+    </div>
+    <div>
+        <input type="text" v-model="age">
+        <span v-show="age"> age : {{age}}</span>
+    </div>
+    <ul>
+        <li v-for="food in foods">{{food}}</li>
+    </ul>
+
+    <!-- 标准的按钮 -->
+    <input type="button" class="btn btn-primary" value="绑定方法" v-on:click="abc">
+    <br />
+    <button type="button" class="btn btn-default" >默认按钮</button>
+    <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+    <button type="button" class="btn btn-primary" v-on:click="add">原始按钮</button>
+    <!-- 表示一个成功的或积极的动作 -->
+    <button type="button" class="btn btn-success" v-on:click="show(121)">成功按钮</button>
+    <!-- 信息警告消息的上下文按钮 -->
+    <button type="button" class="btn btn-info" v-on:click="show(125)">信息按钮</button>
+    <!-- 表示应谨慎采取的动作 -->
+    <button type="button" class="btn btn-warning" v-on:click="show(126)">警告按钮</button>
+    <!-- 表示一个危险的或潜在的负面动作 -->
+    <button type="button" class="btn btn-danger">危险按钮</button>
+    <!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
+    <button type="button" class="btn btn-link">链接按钮</button>
+
+</div>
+<div id="app2">
+    <h2>{{title}}</h2>
+    {{school.name}}:{{school.mobile}}
+    <ul><li v-for="campus in campuses">{{campus}}</li></ul>
+    <p v-text="content">
+    </p>
+    <p v-html="html_content">
+    </p>
+</div>
+
+
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:'#app',
+        data:{
+            msg:"黑马程序员",
+            name:"A",
+            age:44,
+            foods: [
+                {
+                    name: "葱",
+                    price: 22.5,
+                },
+                {
+                    name: "姜",
+                    price: 5.5,
+                },
+                {
+                    name: "蒜",
+                    price: 6.3,
+                },
+
+            ]
+        },
+        methods: {
+            abc:function() {
+                // alert("kkk");
+                // console.log("abc");
+                this.name = "许援朝";
+                this.age = 100;
+            },
+            add:function () {
+                this.age++;
+            },
+            show:function (index) {
+                console.log(index);
+            }
+        }
+    })
+    var app2=new Vue({
+        el:'#app2',
+        data:{
+            title:"数据对象",
+            school: {
+                name: "黑马程序员",
+                mobile: "400-618-9090",
+            },
+            campuses: ["北京校区", "上海校区", "广州校区", "深圳校区"],
+            html_content: "<h2>html在js内部</h2>",
+            content:"简单文本",
+        }
+    })
+</script>
+
+</body>
+</html>
