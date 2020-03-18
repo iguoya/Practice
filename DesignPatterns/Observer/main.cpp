@@ -12,14 +12,14 @@ int main(){
     sub->SetState("new"); //也可以由 Observer 调用
     sub->Notify();
 
-    char buffer[256];
-    ifstream in("explanation.txt");
-    while (!in.eof() )
-    {
-        in.getline (buffer,100);
-        cout << buffer << endl;
-    }
-    in.close();
+//    char buffer[256];
+//    ifstream in("explanation.txt");
+//    while (!in.eof() )
+//    {
+//        in.getline (buffer,100);
+//        cout << buffer << endl;
+//    }
+//    in.close();
     //    ofstream out("explanation.txt");
     //    out<<"完全ojbk";
     //    out.close();

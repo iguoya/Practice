@@ -1,4 +1,11 @@
 cmake_minimum_required(VERSION 2.8)
 
 project(Adapter)
-add_executable(${PROJECT_NAME} "main.cpp")
+
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+
+add_executable(Adapter ${DIR_SRCS})
