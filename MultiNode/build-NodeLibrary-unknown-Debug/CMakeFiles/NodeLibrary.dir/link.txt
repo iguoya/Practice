@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libNodeLibrary.so -o libNodeLibrary.so CMakeFiles/NodeLibrary.dir/nodelibrary.cpp.o CMakeFiles/NodeLibrary.dir/message.cpp.o CMakeFiles/NodeLibrary.dir/servernode.cpp.o 

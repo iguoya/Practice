@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/NodeClient.dir/main.cpp.o CMakeFiles/NodeClient.dir/client.cpp.o -o NodeClient   -L/home/tiger/MultiNode/NodeClient/../build-NodeLibrary-unknown-Debug  -Wl,-rpath,/home/tiger/MultiNode/NodeClient/../build-NodeLibrary-unknown-Debug -lNodeLibrary 
