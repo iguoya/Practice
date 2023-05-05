@@ -1,0 +1,5 @@
+# ninja log v5
+1	13	0	clean	a31eedcededa8236
+1	47	1683298857033881443	CMakeFiles/NodeServer.dir/main.cpp.o	cbe2a581fd516f49
+1	48	1683298857037881443	CMakeFiles/NodeServer.dir/server.cpp.o	1360560c9d4de108
+48	105	1683298857093881442	NodeServer	bfcdfaf5fba9dc73

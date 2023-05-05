@@ -6,8 +6,8 @@ size_t Client::count = 1;
 Client::Client(string name)
 {
     m_socket = socket(PF_INET, SOCK_DGRAM, 0);
-    bzero(sendData, sizeof(sendData));
-    bzero(receiveData, sizeof(receiveData));
+    memset(sendData, 0, sizeof(sendData));
+    memset(receiveData, 0, sizeof(receiveData));
     m_name = name;
 }
 

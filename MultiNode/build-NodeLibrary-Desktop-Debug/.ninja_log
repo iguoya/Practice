@@ -1,0 +1,6 @@
+# ninja log v5
+1	8	0	clean	a31eedcededa8236
+16	173	1683296515305917781	CMakeFiles/NodeLibrary.dir/servernode.cpp.o	88039826ba2bac7d
+0	283	1683296515413917779	CMakeFiles/NodeLibrary.dir/nodelibrary.cpp.o	f14d5f30dfb4aab6
+7	310	1683296515441917779	CMakeFiles/NodeLibrary.dir/message.cpp.o	b540eaf611422465
+310	355	1683296515485917778	libNodeLibrary.so	1d18aa4c3e8391aa
