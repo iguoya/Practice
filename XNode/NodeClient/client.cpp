@@ -28,7 +28,7 @@ void Client::connect(string ip, uint16_t port)
 
 void Client::run()
 {
-    for(auto i = 0; i < 10; ++i) {
+    for(auto i = 0; i < 30; ++i) {
         request(generateMessage());
         usleep(100000);
         response();
