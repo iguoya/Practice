@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/NodeServer.dir/main.cpp.o CMakeFiles/NodeServer.dir/server.cpp.o -o NodeServer 

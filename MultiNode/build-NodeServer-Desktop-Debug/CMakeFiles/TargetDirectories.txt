@@ -1,3 +1,0 @@
-/home/tiger/Practice/MultiNode/build-NodeServer-Desktop-Debug/CMakeFiles/NodeServer.dir
-/home/tiger/Practice/MultiNode/build-NodeServer-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/tiger/Practice/MultiNode/build-NodeServer-Desktop-Debug/CMakeFiles/rebuild_cache.dir

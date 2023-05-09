@@ -1,7 +1,7 @@
 #ifndef STANDALONENODE_H
 #define STANDALONENODE_H
-#include "server.h"
-#include "client.h"
+//#include "server.h"
+//#include "client.h"
 
 class StandAloneNode
 {

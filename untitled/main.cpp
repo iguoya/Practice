@@ -1,29 +1,21 @@
+#include <gtkmm.h>
 
-// 用类对象创建线程
-#include <iostream>
-#include <thread>
-using namespace std;
-
-
-// 类要变成可调用对象需要重载操作符（）
-class TA{
+class MyWindow : public Gtk::Window {
 public:
-    int m_i;
-    TA(int i):m_i(i){}
-    void operator()()//不能带参数，代码从这开始执行
-    {
-        cout<<"我的线程"<<m_i<<"开始执行了"<<endl;
-        //...
-        cout<<"我的线程结束执行了"<<endl;
+    MyWindow(Gtk::Window &window) : Gtk::Window(window) {}
+
+    virtual void on_destroy() {
+        Gtk::main_quit();
     }
 };
 
-int main(){
-    int myi =6;
-    TA ta(myi);
-    thread my_thread(ta);// ta 可调用对象
-    my_thread.join();//等待子线程执行结束
+int main(int argc, char *argv[]) {
+    Gtk::Main main;
 
-    cout<<"I love China"<<endl;
+    MyWindow window(Gtk::Window("My Window"));
+    window.set_title("My Window");
+
+    main.run(window);
+
     return 0;
 }
